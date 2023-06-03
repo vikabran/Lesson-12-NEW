@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap');
+
+body {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #637381;
+	background-color: rgb(212, 243, 200);
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+img {
+	max-width: 100%;
+}
+/*--------- Container --------*/
+[class*="__container"] {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+/*---------------------------*/
+
+.header {
+	background-color: #FFFFFF;
+	position: fixed;
+	min-width: 100%;
+}
+.header__container {
+}
+.header__logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 45px;
+}
+.header__menu {
+	display: inline-block;
+	
+}
+.menu {
+}
+.menu__list {
+	margin-right: 129px;
+}
+.menu__item {
+	display: inline-block;
+	vertical-align: middle;
+	color: #212B36;
+	font-weight: 600;
+	padding: 30px 0;
+}
+.menu__item_parent {
+	position: relative;
+}
+.menu__item_parent .menu__link::after {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: url("../img/icons/arrow_black.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+.menu__item_parent:hover .menu__link::after {
+	transform: rotate(-180deg);
+	margin-top: -6px;
+}
+.menu__item_parent:hover .menu__link {
+	background-color: #f4f7ff;
+	border-radius: 5px;
+	color: #212b36;
+}
+.menu__item_parent:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	position: absolute;
+	top: 95px;
+	left: 3px;
+	transform: translate(0, 0px);
+}
+.menu__link {
+	padding: 9px 15px;
+}
+.menu__link:hover {
+	color: #3056D3;
+}
+.menu__item_parent .menu__link {
+	padding-right: 35px;
+	position: relative;
+}
+.sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 3px;
+	background-color: #FFFFFF;
+	border: 0.5px solid #E7E7E7;
+	border-radius: 5px;
+	padding: 22px 0;
+	display: inline-block;
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(0, 20px);
+	transition: all 0.3s;
+}
+.sub-menu__list {
+}
+.sub-menu__list::before {
+	content: "";
+	background: url("../img/icons/triangle.svg") 0 0 no-repeat;
+	width: 33px;
+	height: 20px;
+	position: absolute;
+	top: -11px;
+	left: 12px;
+}
+.sub-menu__item {
+	min-width: 180px;
+	padding: 0 24px;
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 13px;
+}
+.sub-menu__item:hover .sub-menu__link {
+	color: #3056D3;
+}
+.sub-menu__link {
+	color: #637381;
+}
+.sub-menu__item_parent {
+	position: relative;
+}
+.sub-menu__item_parent .sub-menu__link::after {
+	content: "";
+	display: inline-block;
+	width: 5px;
+	height: 10px;
+	background: url("../img/icons/arrow_blue.svg") 0 0 / 100% no-repeat;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+}
+.sub-menu__item_parent:hover .sub-content {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+}
+/* --------!!!!!!!!!!!!!!!!! -------------------- */
+.sub-content {
+	position: absolute;
+	top: -25px;
+	left: 180px;
+	padding: 30px;
+	background-color: #FFFFFF;
+	border: 0.5px solid #E7E7E7;
+	border-radius: 5px;
+	min-width: 680px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	transform: translate(0, 20px);
+}
+.sub-content__column {
+	display: inline-block;
+	vertical-align: top;
+}
+.sub-content__column:not(:last-child) {
+	margin-right: 80px;
+}
+.sub-content__title {
+	font-weight: 600;
+	color: #212B36;
+	min-width: 99px;
+	margin-bottom: 20px;
+}
+.sub-content__list {
+}
+.sub-content__item {
+	font-weight: 500;
+	color: #637381;
+}
+.sub-content__item:not(:last-child) {
+	margin-bottom: 12px;
+}
+.sub-content__item:hover .sub-content__link {
+	color: #3056D3;
+}
+.sub-content__link {
+}
+.sub-content__banner {
+}
+.icons {
+	display: inline-block;
+	vertical-align: middle;
+}
+.icons__item {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.icons__item:not(:last-child) {
+	margin-right: 20px;
+}
+.icons__img {
+
+}
+.icons__value {
+	background-color: #3056D3;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 11px;
+	position: absolute;
+	top: -5px;
+	right: -8px;
+}
